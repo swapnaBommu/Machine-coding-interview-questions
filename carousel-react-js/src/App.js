@@ -18,12 +18,18 @@ function App() {
       setLoading(false);
     }
   }
+  console.log(images)
   useEffect(()=>{
     fetchImages(8);
   },[])
   return (
     <div className="carousel-container">
-      
+      <Carousel
+        images = {images}
+        isLoading = {loading}
+        imageLimit={8}
+        imagePerSlide={2}
+      />
     </div>
   );
 }
