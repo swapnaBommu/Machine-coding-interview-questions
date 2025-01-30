@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Exp</title>
+</head>
+<body>
+    <div>
+        <b>1. What is the output of below-console</b>
+        <p>let x = 18;</p> 
+        <p>let y = 20;</p> 
+        <p>console.log("total = "+ x + y);</p>
+    </div>
+    <h4>output</h4>total = 1820
+    <h4>Explanation:</h4>
+    <p>before x we have +.so it converts the number to string.In javascript if we
+        try to add anything to the string it will concatinate to it.
+    </p>
+    <div>
+        <b>2. What is the output of below-console</b>
+        <p>const arr = [1, 'q', 3]; </p>
+        <p>arr.map((num) => num*2);</p> 
+        <p>console.log(arr);</p>
+    </div>
+    <h4>output</h4>[1,'q',3]
+    <h4>Explanation:</h4>
+    <p>The .map() function does not change the original array arr. 
+        It creates a new array, but that new array is not stored
+         in a variable, so it is discarded.
+    </p>
+    <div>
+        <b>
+        3. Write a JavaScript function to achieve the output below 
+        (should modify the original array)
+        </b>
+        <p>Input:var obj=[{id:1, name:"john"}, {id:2,name: "doe"}]:</p>
+        <p>output: obj=[{id:1, value:"john"}, {id:2, value:"doe"}];</p>
+    </div>
+    <div>
+        <b>
+            4. Write a JavaScript function to count and remove all vowels from 
+            a string:
+            Input: str "javascript"
+            Output: jvscrpt
+        </b>
+
+    </div>
+    <br>
+    <div>
+        <b>
+        5. Write a function that counts how many different characters appear more than
+         once in a string. For instance Input: "ab cd ef a" 
+        </b>
+        <p>
+            Output: 1 (the character 'a' appears more than once) 
+        Input: "abbacdde" Output 3 
+        (the characters 'a', 'b', and 'd' each appears more than once)
+        </p>
+    </div>
+    <div>
+        <b>
+            6.Write a function to generate a JWT in Node.js 
+            using the JSON web token package. Use userld as the payload.
+        </b>
+    </div>
+    <div>
+        <b>
+           7.  Write a Node.js function that reads a file asynchronously and 
+            prints its contents to the console. 
+            Use Promises instead of callbacks.
+        </b>
+    </div>
+    <div>
+        <b>
+            8. Write a middleware function in Express.js that logs the method, 
+            URL, and response time for each request.
+        </b>
+    </div>
+    <div>
+        <b>
+        9. Construct a MongoDB query to perform a join between two collections,
+         Customers and Orders.
+
+Collection: Customers
+
+{"_id": ObjectId("1"), "name": "John Doe", "email": "john@example.com"}
+
+Collection: Orders {"_id": ObjectId("a"), "product": "Laptop", "customerld": Objectid("1")}
+        </b>
+    </div>
+
+    <script>
+        let x = 18; 
+        let y = 20; 
+        console.log("total = "+ x + y);
+
+        const arr = [1, 'q', 3]; 
+        arr.map((num) => num*2); 
+        console.log(arr);
+        //ans for qusestion 3
+        var obj=[{id:1, name:"john"}, {id:2,name: "doe"}];
+        console.log('before convert',obj)
+        function modifyArray(arr) {
+            arr.forEach(item => {
+                // Replace the 'name' property with 'value'
+                item.value = item.name;
+                delete item.name; // Remove the old 'name' property
+            });
+        }
+        modifyArray(obj);
+        //ans for question 4
+        
+        let str = 'javascript';
+        function countAndRemoveVowels(str){
+            const vowels = 'aeiouAEIOU';
+            let count = 0;
+            let result="";
+            for(let i=0;i<str.length;i++){
+                if(vowels.includes(str[i])){
+                    count++;
+                }else{
+                    result+=str[i];
+                }
+            }
+           console.log('vowels count:',count);
+           console.log('string after removing vowels',result)
+        }
+        countAndRemoveVowels(str);
+        
+        //ans for question 5
+        function countRepeatedChars(str) {
+            const charCount = {};  // Object to store frequency of each character
+            let repeatedCount = 0; 
+            // Loop through the string and count each character
+            for (let char of str) {
+                if (char !== ' ') { // Ignore spaces if you want to exclude them
+                    charCount[char] = (charCount[char] || 0) + 1;
+                }
+            }
+
+            // Loop through the charCount object and count how many characters have a frequency greater than 1
+            for (let char in charCount) {
+                if (charCount[char] > 1) {
+                    repeatedCount++;
+                }
+            }
+            return repeatedCount;
+        }
+        let str1 = "swapna";
+        console.log(countRepeatedChars(str1));
+
+        //ans for question 6
+        const generatejwtToken = ()=>{
+            const key = 'jwtsecretekey';
+            const expire = new Data()*24*60;
+            let token = jwt.sign({id:userId},key,{
+                expiresIn:expire
+            })
+        }
+   
+    </script>
+</body>
+</html>

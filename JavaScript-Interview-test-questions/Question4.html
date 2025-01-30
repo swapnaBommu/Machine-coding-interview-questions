@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Check Example</title>
+</head>
+<body>
+    <div id="myDiv">
+        we want to run an interval and clear it 
+        out when the first div after the body tag is ready
+    </div>
+    <script>
+        //function to check if the first div after the body is ready
+        function checkDivReady(){
+            const firstDiv = document.querySelector('body > div');
+            if(firstDiv){
+                console.log('first div is ready...');
+                clearInterval(intervalId);
+            }else{
+                console.log('Checking for first div...');
+            }
+        }
+        // Set interval to check every 500 milliseconds 
+        const intervalId = setInterval(checkDivReady, 500);
+    </script>
+</body>
+</html>
