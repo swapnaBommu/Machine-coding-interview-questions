@@ -9,7 +9,7 @@ const Carousel = ({
   const imgRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imgWidth, setImgWidth] = useState(0);
-  
+   
   useEffect(()=>{
       if(images.length > 0){
         setCurrentIndex(0);
