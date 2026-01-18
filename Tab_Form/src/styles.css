@@ -1,0 +1,38 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.heading-container {
+  display: flex;
+  cursor: pointer;
+}
+.heading {
+  padding: 5px;
+  border: 1px solid black;
+}
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.btn {
+  padding: 10px;
+  margin: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+}
+.active {
+  color: blue;
+  font-size: 20px;
+  background-color: white;
+}
+.dark {
+  background-color: black;
+  color: white;
+}
+.light {
+  background-color: white;
+}
