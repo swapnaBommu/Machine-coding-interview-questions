@@ -23,7 +23,7 @@ const Accordion = () => {
     const handleClick =(index)=>{
         setOpenIndex( index === openIndex ? null : index);
     }
-  return (
+  return (!items || items.length == 0) ? "No items Available" : (
     <div className='accordion'>
         {items.map((item, index)=>(
             <div key={index} className='accordion-item'>
