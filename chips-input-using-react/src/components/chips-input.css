@@ -1,0 +1,15 @@
+.chips-input{
+    padding: 10px;
+    font-size: medium;
+    border: 2px solid #8b2121;
+    border-radius: 4px;
+}
+.chip-container{
+    display: flex;
+}
+.chip{
+    padding: 8px;
+    margin: 10px;
+    color: white;
+    background-color: gray;
+}
