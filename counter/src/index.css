@@ -12,7 +12,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.light{
+  background-color: #ffffff;
+  color: #242424;
+}
+.dark{
+  background-color: #1a1a1a;
+  color: #f9f9f9;
+  
+}
+.app {
+  min-height: 100vh;
+}
 a {
   font-weight: 500;
   color: #646cff;
