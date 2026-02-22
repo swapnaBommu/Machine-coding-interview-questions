@@ -1,0 +1,229 @@
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 30px;
+
+  background-color: #222;
+  color: white;
+
+}
+
+.nav-left h2 {
+  margin: 5px 0;
+}
+
+.nav-right button {
+
+  margin-left: 10px;
+  padding: 8px 18px;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.cart-btn {
+  background-color: orange;
+  color: white;
+}
+
+.reset-btn {
+  background-color: red;
+  color: white;
+}
+
+.nav-right button:hover {
+  opacity: 0.8;
+}
+
+/* product card  */
+.card {
+
+  width: 220px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  padding: 20px;
+  margin: 15px;
+
+  text-align: center;
+
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+
+}
+
+.product-name {
+
+  font-size: 20px;
+  margin-bottom: 10px;
+
+}
+
+.price {
+
+  font-size: 18px;
+  color: green;
+
+  margin-bottom: 15px;
+
+}
+
+.btn-container {
+
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.add-btn {
+
+  background-color: green;
+  color: white;
+
+  border: none;
+  padding: 8px 15px;
+
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.remove-btn {
+
+  background-color: red;
+  color: white;
+
+  border: none;
+  padding: 8px 15px;
+
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.product_wrapper{
+  display: flex;
+}
+
+/* cart modal */
+
+/* Background Overlay */
+
+.modal-overlay {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/* Modal Box */
+
+.cart-modal {
+
+  width: 400px;
+  max-height: 500px;
+
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+}
+
+
+/* Header */
+
+.cart-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 15px;
+
+}
+
+
+/* Close Button */
+
+.close-btn {
+
+  background: red;
+  color: white;
+
+  border: none;
+  padding: 6px 15px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+
+/* Clear Button */
+
+.clear-btn {
+
+  background: orange;
+  color: white;
+
+  border: none;
+
+  padding: 8px 15px;
+
+  border-radius: 5px;
+
+  margin-bottom: 15px;
+
+  cursor: pointer;
+
+}
+
+
+/* Cart Items */
+
+.cart-item {
+
+  border-bottom: 1px solid #ddd;
+
+  padding: 10px 0;
+
+}
+
+
+/* Footer */
+
+.cart-footer {
+
+  margin-top: 20px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+}
